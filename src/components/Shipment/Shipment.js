@@ -14,7 +14,7 @@ const Shipment = () => {
     
       const orderDetails = {...loggedInUser, products: saveCart, shipment:data, orderTime: new Date() };
       
-      fetch('http://localhost:5000/addOrder', {
+      fetch('https://desolate-savannah-74449.herokuapp.com/addOrder', {
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify(orderDetails)
